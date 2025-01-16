@@ -106,11 +106,11 @@ def load_settings():
             for key in sorted(config['Files']):
                 listbox_files.insert(tk.END, config['Files'][key])
 
-        # OutputPaths (Yolları birleştiriyoruz)
+        # OutputPaths 
         if 'OutputPaths' in config:
             output_paths = []
             for key in sorted(config['OutputPaths']):
-                output_paths.append(config['OutputPaths'][key])  # Yolu birleştir
+                output_paths.append(config['OutputPaths'][key]) 
             for path in output_paths:
                 listbox_output_paths.insert(tk.END, path)
 
@@ -136,7 +136,7 @@ root.title("Build Manager")
 lbl_files = tk.CTkLabel(root, text="Selected Files:")
 lbl_files.grid(row=0, column=0, padx=10, pady=10)
 
-listbox_files = CTkListbox(root, height=50)  # Hedeflenen argümanlar
+listbox_files = CTkListbox(root, height=50)  
 listbox_files.grid(row=0, column=1, padx=10, pady=10)
 btn_browse_file = tk.CTkButton(root, text="Browse", command=browse_file)
 btn_browse_file.grid(row=0, column=2, padx=10, pady=10)
@@ -145,7 +145,7 @@ btn_browse_file.grid(row=0, column=2, padx=10, pady=10)
 lbl_output_paths = tk.CTkLabel(root, text="Selected Output Paths:")
 lbl_output_paths.grid(row=2, column=0, padx=10, pady=10)
 
-listbox_output_paths = CTkListbox(root, height=50)  # Hedeflenen argümanlar
+listbox_output_paths = CTkListbox(root, height=50) 
 listbox_output_paths.grid(row=2, column=1, padx=10, pady=10)
 btn_browse_output_path = tk.CTkButton(root, text="Browse", command=browse_output_path)
 btn_browse_output_path.grid(row=2, column=2, padx=10, pady=10)
@@ -154,7 +154,7 @@ btn_browse_output_path.grid(row=2, column=2, padx=10, pady=10)
 lbl_executables = tk.CTkLabel(root, text="Executables:")
 lbl_executables.grid(row=3, column=0, padx=10, pady=10)
 
-listbox_executables = CTkListbox(root, height=50)  # Hedeflenen argümanlar
+listbox_executables = CTkListbox(root, height=50)  
 listbox_executables.grid(row=3, column=1, padx=10, pady=10)
 btn_browse_executables = tk.CTkButton(root, text="Browse", command=browse_executables)
 btn_browse_executables.grid(row=3, column=2, padx=10, pady=10)
