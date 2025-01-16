@@ -124,7 +124,7 @@ def load_settings():
             var_open_exes.set(config['Settings'].getboolean('open_exes'))
 
 def browse_executables():
-    exe_path = filedialog.askopenfilename(filetypes=[("Executable files", "*.url")])
+    exe_path = filedialog.askopenfilename(filetypes=[("Executable files", "*.exe")]) # Use the extension you want to open
     if exe_path:
         listbox_executables.insert(tk.END, exe_path)
 
